@@ -1,0 +1,13 @@
+.job{
+    margin: 2rem;
+
+}
+.input_group{
+    padding: .5rem;
+    justify-content: flex-start;
+    
+}
+textarea{
+    border-radius: 5px;
+    padding: .5rem;
+}

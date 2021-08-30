@@ -1,0 +1,49 @@
+<!-- <div *ngFor="let m of getJobs" class="data">
+    <div class="card  mycard">
+        <div class="card-body">
+            <div class="top">
+                <h4 class="card-title"><input type="text" [disabled]="m.toggleButton" class="myinput"
+                    [(ngModel)]="m.profile" value="{{m.profile}}" /></h4>
+                    
+                <span class="card-text myinput" [(ngModel)]="m.job_id ">Job ID: {{m.job_id}}</span>
+                
+            </div>
+            
+            <h6 class="card-title"><input type="text" [disabled]="m.toggleButton" class="myinput"
+                    [(ngModel)]="m.company" value="{{m.company}}" /></h6>
+            
+            <p class="card-text"  [(ngModel)]="m.job_desc">{{m.job_desc}}</p>
+           
+
+            <div class="top">
+                
+                <span class="card-text"><strong>&#x2709;</strong> <input type="text" [disabled]="m.toggleButton" class="myinput"
+                    [(ngModel)]="m.experience" value="{{m.experience}}" /></span>
+                <span class="card-text"><strong>&#8377;</strong><input type="text" [disabled]="m.toggleButton" class="myinput"
+                        [(ngModel)]="m.salary" value="{{m.salary}}" /></span>
+               
+                <span class="card-text"><strong>&#x2708;</strong> <input type="text" [disabled]="m.toggleButton" class="myinput"
+                        [(ngModel)]="m.location" value="{{m.location}" /></span>
+
+            </div>
+            
+            <div >
+                <span>Skills Required:</span>
+                <span class="card-text "><input type="text" [disabled]="m.toggleButton" class="myinput" [(ngModel)]="m.skills"
+                    value="{{m.skills}}" /></span>
+            </div>
+            <p class="card-text" [(ngModel)]="m.requirement">{{m.requirement}}"</p>
+           
+            <button [routerLink]="['/apply']" class="btn btn-secondary">Apply</button>
+
+        </div>
+    </div>
+</div> -->
+<div *ngFor="let m of getforms" class="data">
+    <div class="top">
+        <p [(ngModel)]="m.firstname">{{m.firstname}}</p>
+        <p [(ngModel)]="m.lastname">{{m.lastname}}</p>
+        <p [(ngModel)]="m.email">{{m.email}}</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi mollitia quod incidunt dolore culpa sit nostrum consequatur sequi fugit voluptatibus, deserunt est dolores quia nihil, sint cumque iste laboriosam repellendus!</p>
+    </div>
+</div>

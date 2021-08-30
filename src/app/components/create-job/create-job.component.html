@@ -1,0 +1,69 @@
+<div class="job"> 
+    <form class="box needs-validation clearfix" (ngSubmit)="submitForm(langForm)" #langForm="ngForm" novalidate>
+
+        <div class="myform">
+            <label for="validationCustom18">Company Name</label>
+                <div class="input_group">
+                    <textarea type="text" id="formInput" [(ngModel)]="model.company" id="company" class="company"
+                        name="company" #company="ngModel" cols="70" rows="1"></textarea>
+                </div>
+        </div>
+        <div class="myform ">
+            <label for="validationCustom18">Job Profile</label>
+            <div class="input_group">
+                <textarea type="text" id="formInput" [(ngModel)]="model.profile" id="profile" class="profile" name="profile"
+                    #profile="ngModel" cols="70" rows="1"></textarea>
+    
+            </div>
+        </div>
+        <div class="myform">
+            <label for="validationCustom18">Salary</label>
+            <div class="input_group">
+                <textarea type="text" id="formInput" [(ngModel)]="model.salary" id="salary" class="salary" name="salary"
+                    #salary="ngModel" cols="70" rows="1"></textarea>
+            </div>
+        </div>
+    
+    
+        <div class="myform">
+            <label for="validationCustom18">Location</label>
+            <div class="input_group">
+                <textarea type="text" id="formInput" [(ngModel)]="model.location" id="location" class="location"
+                    name="location" #location="ngModel" cols="70" rows="1"></textarea>
+    
+            </div>
+        </div>
+        <div class="myform">
+            <label for="validationCustom18">Experience</label>
+            <div class="input_group">
+                <textarea type="text" id="formInput" [(ngModel)]="model.experience" id="experience" class="experience"
+                    name="experience" #experience="ngModel" cols="70" rows="1"></textarea>
+            </div>
+        </div>
+    
+        <div class="myform">
+            <label for="validationCusom18">Skills</label>
+            <div class="input_group">
+                <textarea [(ngModel)]="model.skills" name="skills" id="skills" class="skills" #skills="ngModel" cols="70"
+                    rows="1"></textarea>
+            </div>
+        </div>
+        <div class="myform">
+            <label for="validationCustom18">Requirements</label>
+            <div class="input_group">
+                <textarea type="text" id="formInput" [(ngModel)]="model.requirement" id="requirement" class="requirement"
+                    name="requirement" #requirement="ngModel" cols="70" rows="4"></textarea>
+            </div>
+        </div>
+        <div class="myform">
+            <label for="validationCustom18">Job Description</label>
+            <div class="input_group">
+                <textarea type="text" id="formInput" [(ngModel)]="model.job_desc" id="job_desc" class="job_desc"
+                    name="rjob_desc" #job_desc="ngModel" cols="70" rows="4"></textarea>
+            </div>
+        </div>
+    
+        <button type="submit" class=" mybtn btn btn-success">SUBMIT</button>
+        <button type="button" style="margin: 1rem;" class="mybtn btn bg-light" (click)="langForm.reset()">CLEAR</button>
+    </form>
+</div>

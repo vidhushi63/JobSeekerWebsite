@@ -1,0 +1,57 @@
+
+<form class="box needs-validation clearfix" (ngSubmit)="submitForm(langForm)" #langForm="ngForm"  novalidate>
+  
+  <div class="name">
+    <div class="myform">
+      <label for="validationCustom18">First Name</label>
+      <div class="input_group">
+        <input type="text" id="formInput"[(ngModel)]="model.firstname" id="firstname" class="firstname" name="firstname"  #firstname="ngModel">
+  
+      </div>
+    </div>
+    <div class="myform ">
+        <label for="validationCustom18">Last Name</label>
+        <div class="input_group">
+          <input type="text" id="formInput"[(ngModel)]="model.lastname" id="lastname" class="lastname" name="lastname"  #lastname="ngModel">
+  
+        </div>
+      </div>
+  </div>
+  <div class="myform">
+    <label for="validationCustom18">Enter the Job Id: </label>
+    <div class="input_group">
+      <textarea type="text" id="formInput"[(ngModel)]="model.Ejob_id" id="Ejob_id" class="Ejob_id" name="Ejob_id"  #Ejob_id="ngModel" cols="50" rows="1"></textarea>
+    </div>
+  </div>
+
+
+    <div class="myform">
+      <label for="validationCustom18">Email Address</label>
+      <div class="input_group">
+        <textarea type="text" id="formInput"[(ngModel)]="model.email" id="email" class="email" name="email"  #email="ngModel" cols="50" rows="1"></textarea>
+
+      </div>
+    </div>
+    <div class="myform">
+      <label for="validationCustom18">Phone</label>
+      <div class="input_group">
+        <textarea type="text" id="formInput"[(ngModel)]="model.phone" id="phone" class="phone" name="phone"  #phone="ngModel" cols="50" rows="1"></textarea>
+      </div>
+    </div>
+    
+  <div class="myform">
+    <label for="validationCusom18">Address</label>
+    <div class="input_group">
+      <textarea [(ngModel)]="model.address"name="address" id="address" class="address" #address="ngModel"cols="50" rows="1"></textarea>
+    </div>
+  </div>
+  <div class="myform">
+    <label for="validationCustom18">Why Should We Hire You? </label>
+    <div class="input_group">
+      <textarea type="text" id="formInput"[(ngModel)]="model.why" id="why" class="why" name="why"  #why="ngModel" cols="50" rows="4"></textarea>
+    </div>
+  </div>
+
+  <button type="submit" class=" mybtn btn  btn-success">SUBMIT</button>
+  <button type="button" class="mybtn btn bg-light" (click)="langForm.reset()">CLEAR</button>
+</form>

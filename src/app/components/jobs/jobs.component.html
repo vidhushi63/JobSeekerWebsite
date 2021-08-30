@@ -1,0 +1,75 @@
+<div *ngFor="let m of cat" class="data">
+    <div class="card  mycard">
+        <div class="card-body">
+            <div class="top">
+                <h4 class="card-title"><input type="text" [disabled]="m.toggleButton" class="myinput"
+                    [(ngModel)]="m.profile" value="{{m.profile}}" /></h4>
+                    
+                <span class="card-text myinput" [(ngModel)]="m.job_id ">Job ID: {{m.job_id}}</span>
+                
+            </div>
+            
+            <h6 class="card-title"><input type="text" [disabled]="m.toggleButton" class="myinput"
+                    [(ngModel)]="m.company" value="{{m.company}}" /></h6>
+            
+            <p class="card-text"  [(ngModel)]="m.job_desc">{{m.job_desc}}</p>
+            <div class="top">
+                
+                <span class="card-text"><strong>&#x2709;</strong> <input type="text" [disabled]="m.toggleButton" class="myinput"
+                    [(ngModel)]="m.experience" value="{{m.experience}}" /></span>
+                <span class="card-text"><strong>&#8377;</strong><input type="text" [disabled]="m.toggleButton" class="myinput"
+                        [(ngModel)]="m.salary" value="{{m.salary}}" /></span>
+               
+                <span class="card-text"><strong>&#x2708;</strong> <input type="text" [disabled]="m.toggleButton" class="myinput"
+                        [(ngModel)]="m.location" value="{{m.location}" /></span>
+
+            </div>
+            
+            <div >
+                <span>Skills Required:</span>
+                <span style="margin: 1rem;" class="card-text ">{{m.skills}}</span>
+            </div>
+            <!-- <p class="card-text" [(ngModel)]="m.requirement">{{m.requirement}}"</p> -->
+           
+            <button [routerLink]="['/apply']" class="btn btn-primary">Apply</button>
+            <button style="margin: 1rem;" class="btn btn-secondary" (click)="showApp(m)">Show Applicants</button>
+        </div>
+    </div>
+</div>
+<div class="" id="mytable">
+
+    <div class="theader">
+        
+        <div *ngFor="let x of cat">
+            <h4 [(ngModel)]="x.company">Job Applicants of {{x.company}}</h4>
+        </div>
+        <span ><button (click)="close() " id="close">&#10006;</button></span>
+    </div>
+    <br>
+
+    <table class="table table-striped" > 
+        <thead class="thead">
+          <tr class="data">
+            <th>Employe Name</th>
+            <th>Email id</th>
+            <th>Phone Number</th>
+            <th>Permanent Address</th>
+            <th >Why should hire you?</th>
+          </tr>
+        </thead>
+       <tbody class="tbody">
+        <tr *ngFor="let m of getforms" class="data">
+          <td>{{m.firstname}}{{m.lastname}}</td>
+          <td>{{m.email}}</td>
+          <td>{{m.phone}}</td>
+          <td>{{m.address}}</td>
+          <td >{{m.why}}</td>
+          <!-- <td><button type="button" (click)="model=m">Select</button></td>
+          <td><button type="button" (click)="deleteForm(m)" >Delete</button></td>
+          <td><button id="edit_btn" (click)="enable(m)"> {{m.lbl}}</button></td> -->
+          
+          
+        </tr>
+    </tbody>
+    </table>
+</div>
